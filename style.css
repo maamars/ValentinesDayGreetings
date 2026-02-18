@@ -501,4 +501,13 @@ section {
         width: 150px;
         height: 250px;
     }
+
+    .flower-container.bouquet-v2 {
+        height: 500px;
+    }
+
+    .bouquet-svg {
+        width: 320px;
+        height: 426px;
+    }
 }
