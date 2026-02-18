@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Viney 💜 | Happy Valentine's Day</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="background-decorations" id="bg-decorations"></div>
+
+    <!-- Music Control -->
+    <div class="music-control">
+        <button id="music-btn" class="glass-btn">
+            <span id="music-icon">🔇</span>
+        </button>
+        <audio id="bg-music" loop>
+            <source src="https://www.chosic.com/wp-content/uploads/2021/04/Warm-memories-Emotional-Inspiring-Piano.mp3"
+                type="audio/mpeg">
+        </audio>
+    </div>
+
+    <main class="container">
+        <!-- Intro Section -->
+        <section id="intro-section" class="active">
+            <div class="text-sequence">
+                <h1 class="intro-text" id="text-1">Hi Viney 💜</h1>
+                <p class="intro-text" id="text-2">I know med school gets heavy sometimes…</p>
+                <p class="intro-text" id="text-3">So I made something just for you.</p>
+                <button id="start-btn" class="bloom-btn">Open it 💜</button>
+            </div>
+        </section>
+
+        <!-- Growth Section -->
+        <section id="growth-section" class="hidden">
+            <div id="countdown" class="countdown"></div>
+
+            <div class="flower-container bouquet-v2">
+                <div id="countdown" class="countdown"></div>
+
+                <!-- The Bouquet Wrapper -->
+                <svg class="bouquet-svg" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Ribbon Bow (Back) -->
+                    <g id="ribbon-back" class="ribbon" opacity="0">
+                        <path d="M120 320 Q150 310 180 320 L150 340 Z" fill="#c084fc" />
+                    </g>
+
+                    <!-- Wrapper Paper -->
+                    <path id="wrapper" d="M150 350 L50 200 Q150 150 250 200 Z" fill="#f472b6" opacity="0" />
+
+                    <!-- Flowers -->
+                    <!-- Blue Flower (Left) -->
+                    <g id="flower-blue" class="flower" transform="translate(90, 180) scale(0)">
+                        <circle cx="0" cy="0" r="25" fill="#93c5fd" />
+                        <circle cx="-10" cy="-10" r="15" fill="#60a5fa" />
+                        <circle cx="10" cy="-10" r="15" fill="#60a5fa" />
+                        <circle cx="0" cy="15" r="15" fill="#60a5fa" />
+                    </g>
+
+                    <!-- Pink Flower (Center) -->
+                    <g id="flower-pink" class="flower" transform="translate(160, 190) scale(0)">
+                        <circle cx="0" cy="0" r="30" fill="#f9a8d4" />
+                        <path d="M-25-25 L25 25 M-25 25 L25-25" stroke="#f472b6" stroke-width="2" />
+                        <circle cx="0" cy="0" r="10" fill="#f472b6" />
+                    </g>
+
+                    <!-- Yellow Flower (Right) -->
+                    <g id="flower-yellow" class="flower" transform="translate(220, 170) scale(0)">
+                        <circle cx="0" cy="0" r="22" fill="#fde047" />
+                        <circle cx="0" cy="0" r="10" fill="#eab308" />
+                    </g>
+
+                    <!-- Top Lilies -->
+                    <g id="lily-1" class="flower top-lily" transform="translate(150, 100) scale(0)">
+                        <path d="M0 0 L-10-30 L0-50 L10-30 Z" fill="#a855f7" />
+                        <path d="M0 0 L-25-15 L-40-20 L-25-5 Z" fill="#c084fc" />
+                        <path d="M0 0 L25-15 L40-20 L25-5 Z" fill="#c084fc" />
+                    </g>
+                    <g id="lily-2" class="flower top-lily" transform="translate(100, 120) scale(0)">
+                        <path d="M0 0 L-10-25 L0-40 L10-25 Z" fill="#a855f7" />
+                        <path d="M0 0 L-20-10 L-30-15 L-20-2 Z" fill="#c084fc" />
+                    </g>
+                    <g id="lily-3" class="flower top-lily" transform="translate(200, 120) scale(0)">
+                        <path d="M0 0 L-10-25 L0-40 L10-25 Z" fill="#a855f7" />
+                        <path d="M0 0 L20-10 L30-15 L20-2 Z" fill="#c084fc" />
+                    </g>
+
+                    <!-- Ribbon Front (The Bow) -->
+                    <g id="ribbon-front" class="ribbon" transform="translate(150, 320) scale(0)">
+                        <!-- Left Loop -->
+                        <path d="M0 0 C-40-20-60 20-20 20 Z" fill="#d8b4fe" stroke="#6b21a8" stroke-width="1" />
+                        <!-- Right Loop -->
+                        <path d="M0 0 C 40-20 60 20 20 20 Z" fill="#d8b4fe" stroke="#6b21a8" stroke-width="1" />
+                        <!-- Tails -->
+                        <path d="M-5 10 L-25 50" stroke="#6b21a8" stroke-width="4" stroke-linecap="round" />
+                        <path d="M5 10 L25 50" stroke="#6b21a8" stroke-width="4" stroke-linecap="round" />
+                        <!-- Knot -->
+                        <circle cx="0" cy="5" r="7" fill="#6b21a8" />
+                    </g>
+                </svg>
+
+                <div class="sparkles" id="flower-sparkles"></div>
+                <!-- Handwritten message -->
+                <div id="handwritten-msg" class="handwritten hidden">Happy Hearts Day Viney ♡</div>
+            </div>
+
+            <div id="final-message" class="hidden">
+                <p class="fade-in">Even on your busiest days, you deserve something beautiful.</p>
+                <h2 class="fade-in delay-1">Happy Valentine’s Day, Viney 🌷</h2>
+                <button id="surprise-btn" class="surprise-btn">Tap for a surprise 💜</button>
+            </div>
+
+            <div id="reveal-message" class="hidden">
+                <div class="heart-pulse"></div>
+                <p class="reveal-text">Future Dr. Viney, I’m always rooting for you.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
