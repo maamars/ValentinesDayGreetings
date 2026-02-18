@@ -185,14 +185,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 8. Music Handling
-    musicBtn.addEventListener('click', () => {
-        if (bgMusic.paused) {
-            bgMusic.play().catch(e => console.log("Audio play blocked"));
-            musicIcon.innerText = "🔊";
-        } else {
-            bgMusic.pause();
-            musicIcon.innerText = "🔇";
-        }
-    });
+    // 9. Transition to Magic Bloom
+    const toFlowersBtn = document.getElementById('btn-to-flowers');
+    const specialFlowerScreen = document.getElementById('special-flower-screen');
+
+    if (toFlowersBtn) {
+        toFlowersBtn.addEventListener('click', () => {
+            // Hide previous messages if any
+            revealMessage.classList.add('hidden');
+            finalMessage.classList.add('hidden');
+
+            // Show the special screen
+            specialFlowerScreen.classList.remove('hidden');
+            specialFlowerScreen.classList.add('bloom');
+
+            // Interaction to ensure audio/animations/scroll
+            setTimeout(() => {
+                specialFlowerScreen.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        });
+    }
 });
